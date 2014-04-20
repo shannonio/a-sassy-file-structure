@@ -1,8 +1,13 @@
-# General Sass notes, advice and guidelines (thanks @anotheruiguy)
+# General Sass notes, advice and guidelines 
 
 ## Syntax and formatting
 
 Sass is written using the multi-line format very similar to CSS. While Sass is the language, SCSS is a version of the syntax. There is no right or wrong, better or worse. Some prefer the Sass syntax, I prefer to work with SCSS. For the purpose of this document I will refer Sass as the language, but code examples will be written as SCSS and file names as `.scss`.  
+
+### Sass and AngularJS
+
+You can have a logical AngularJS structure in conjunction with a logical SASS structure. This involes having one SASS folder that contains all of your ui guidelines, and then each of your partials/directives will have its own specific partial that contains any sass only altering that "feature."
+
 
 ### Sass and SCSS
 
