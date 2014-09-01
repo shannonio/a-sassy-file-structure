@@ -1,4 +1,8 @@
-# General Sass notes, advice and guidelines 
+# General Sass and project guidelines
+
+## File Structure
+
+This file structure is based on [bem](http://bem.info/). And inspired by [inuitcss](http://webdesign.tutsplus.com/articles/rubbing-noses-with-inuitcss--webdesign-9523).
 
 ## Syntax and formatting
 
@@ -32,17 +36,17 @@ Sass has two equally valid syntaxes, Sass and SCSS. Some key differences to be i
 
 ## Comments
 
-SCSS supports both invisible and visible comments. Using `//` before any SCSS, this will place a comment in your SCSS code, but will not be output in the processed CSS. 
+SCSS supports both invisible and visible comments. Using `//` before any SCSS, this will place a comment in your SCSS code, but will not be output in the processed CSS.
 
 Using the standard `/* */` CSS comments in your SCSS, when processed this will be output in your CSS.  
 
-Comments in code is awesome. Especially when working with a team. Be kind, leave instructions. 
+Comments in code is awesome. Especially when working with a team. Be kind, leave instructions.
 
 ### Nesting
 
-Nesting in Sass is not like indenting in CSS. In Sass nesting has meaning. Sass uses the nested white space to declare parent child relationships. Nesting allows the developer to inherit the parent selector, but be mindful, it is easy to fall into the trap of insane selector inheritance. Rule of thumb, if you are tabbing in a third time, is this declaration really that specific to this namespace or can you abstract to be used more universally? 
+Nesting in Sass is not like indenting in CSS. In Sass nesting has meaning. Sass uses the nested white space to declare parent child relationships. Nesting allows the developer to inherit the parent selector, but be mindful, it is easy to fall into the trap of insane selector inheritance. Rule of thumb, if you are tabbing in a third time, is this declaration really that specific to this namespace or can you abstract to be used more universally?
 
-Just because you are using Sass doesn't mean that you should toss all CSS and OOCSS best practices out the window. 
+Just because you are using Sass doesn't mean that you should toss all CSS and OOCSS best practices out the window.
 
 **The Good**
 
@@ -103,7 +107,7 @@ Example of a parent class selector with nested selectors:
 	margin-bottom: 2em;
 	p {
 		margin-bottom: 0;
-		line-height: 1.5em;		
+		line-height: 1.5em;
 	}
 	legend {
 		float: left;
@@ -119,20 +123,20 @@ I personally use underscore delimited lowercase selectors. Why? I can double cli
 
 ## Working with partials
 
-A partial in Sass is a document with an underscore preceding the name.  Example, `_widget.scss`. Using this convention, when processed, Sass will not output a standalone CSS file. A partial is simply a resource file that other docs can consume and use. This is essential for managing large libraries of Sass logic, element and widget styles. 
+A partial in Sass is a document with an underscore preceding the name.  Example, `_widget.scss`. Using this convention, when processed, Sass will not output a standalone CSS file. A partial is simply a resource file that other docs can consume and use. This is essential for managing large libraries of Sass logic, element and widget styles.
 
-I have found that the simplest way to manage your Sass files is via a core.scss file consisting of imported partials and a logical grouping of sub files. With Sass @import works and it works really well, unlike standard CSS. It is encouraged to break your files into smaller manageable chunks of code. 
+I have found that the simplest way to manage your Sass files is via a core.scss file consisting of imported partials and a logical grouping of sub files. With Sass @import works and it works really well, unlike standard CSS. It is encouraged to break your files into smaller manageable chunks of code.
 
 If you can't decide to use either Sass or SCSS, the good news is that you don't. Sass and SCSS files can live together in perfect harmony. So if you have a reason for using one syntax over another for specific use cases, this is acceptable. For example, some like to use SCSS for logic building and then use Sass for design building. You do not need to state either SCSS or Sass with the @import function, just the path to the partial.
 
 
 ## Dynamic and reusable code
 
-Sass's greatest strength is in it's ability to create dynamic, intelligent and efficiently reusable code. 
+Sass's greatest strength is in it's ability to create dynamic, intelligent and efficiently reusable code.
 
 ### @mixins
 
-Mixins are a great way to keep your code DRY as well as create logical chunks of code to be reused again and again. Using the `@mixin` directive you can engineer smart reusable code to be used throughout your application. It is considered best practice to only use a mixin if you are also using arguments like the following. 
+Mixins are a great way to keep your code DRY as well as create logical chunks of code to be reused again and again. Using the `@mixin` directive you can engineer smart reusable code to be used throughout your application. It is considered best practice to only use a mixin if you are also using arguments like the following.
 
 ```scss
 @mixin the_box ($padding, $background, $border, $style, $color) {
@@ -207,7 +211,7 @@ Sass has built in functions like `percentage($value)` along with [plenty of othe
     @for $i from 0 through -$exponent {
       $value: $value / $base; } }
   // return the last value written
-  @return $value; 
+  @return $value;
 }
 ```
 
