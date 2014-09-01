@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains box containers yay
+// -----------------------------------------------------------------------------
+.box {
+  border: $border-med solid lighten($silver, 5%);
+  border-radius: $global-radius;
+  color: $gray;
+  padding: $pad-and-half;
+
+  &.thin {
+    border: $border-small solid lighten($silver, 5%);
+  }
+
+  .title {
+    @include single-transition();
+    text-transform: uppercase;
+  }
+
+  .edit-box {
+    float: right;
+  }
+
+  a.edit-box {
+    cursor: pointer;
+  }
+}
+
+.box-link {
+  @include single-transition();
+  @extend .box;
+  display: block;
+
+  .title {
+    @include single-transition();
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $aqua;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  &:hover,
+  &.active {
+    border-color: $aqua;
+    text-decoration: none;
+
+    .title,
+    a {
+      color: $aqua;
+    }
+  }
+}

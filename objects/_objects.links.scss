@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains the configurations of the links that we use through the
+// styles in the application
+// -----------------------------------------------------------------------------
+.link {
+  @include single-transition(opacity);
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    @include opacity(.9);
+  }
+}

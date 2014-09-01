@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// Core: The stuff that matters, Everything that makes or breaks your site
+// Change the app-namespace variable to the name of your app and this to the
+// body.
+// -----------------------------------------------------------------------------
+$icon-font-path: '/fonts/';
+$fa-font-path: '/fonts';
+$app-namespace: 'myapp';
+
+.#{$app-namespace} {
+
+// -----------------------------------------------------------------------------
+// Generic Styles: Low-specificity, far-reaching rulesets (e.g. resets).
+// -----------------------------------------------------------------------------
+  @import "generic/generic.box-sizing";
+  @import "generic/generic.normalize";
+// -----------------------------------------------------------------------------
+// Settings: Global variables, site-wide settings, config switches, etc.
+// -----------------------------------------------------------------------------
+  @import "settings/settings.colors";
+  @import "settings/settings.borders";
+  @import "settings/settings.config";
+  @import "settings/settings.defaults";
+  @import "settings/settings.fonts";
+  @import "settings/settings.shadows";
+// -----------------------------------------------------------------------------
+// Tools: Site-wide mixins and functions.
+// -----------------------------------------------------------------------------
+  @import "tools/tools.clearfix";
+  @import "tools/tools.mixins";
+  @import "tools/tools.functions";
+  @import "tools/tools.z-maps";
+// -----------------------------------------------------------------------------
+// Layouts: Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+// -----------------------------------------------------------------------------
+  @import "layouts/layouts.areas";
+  @import "layouts/layouts.headings";
+  @import "layouts/layouts.paragraphs";
+// -----------------------------------------------------------------------------
+// Objects: Objects, abstractions, and design patterns (e.g. .media {}).
+// -----------------------------------------------------------------------------
+  @import "objects/objects.animations";
+  @import "objects/objects.badges";
+  @import "objects/objects.blockquotes";
+  @import "objects/objects.boxes";
+  @import "objects/objects.buttons";
+  @import "objects/objects.dropdowns";
+  @import "objects/objects.flags";
+  @import "objects/objects.forms";
+  @import "objects/objects.inputs";
+  @import "objects/objects.jumbotron";
+  @import "objects/objects.links";
+  @import "objects/objects.modals";
+  @import "objects/objects.paginations";
+  @import "objects/objects.tables";
+  @import "objects/objects.tabs";
+// -----------------------------------------------------------------------------
+// Partials: Discrete, complete chunks of UI (e.g. .carousel {}).
+// -----------------------------------------------------------------------------
+  @import "partials/partials.headers";
+  @import "partials/partials.footers";
+// -----------------------------------------------------------------------------
+// Trumps: High-specificity, very explicit selectors.
+// Overrides and helper classes (e.g. .hidden {}).
+// -----------------------------------------------------------------------------
+  @import "trumps/trumps.helpers";
+  @import "trumps/trumps.overrides";
+}

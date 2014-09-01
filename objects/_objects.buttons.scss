@@ -1,0 +1,534 @@
+// -----------------------------------------------------------------------------
+// This file contains the configurations of the buttons that we use through the
+// styles in the application
+// -----------------------------------------------------------------------------
+  $touch-click-area: 44px;
+// -----------------------------------------------------------------------------
+// button common styles
+// -----------------------------------------------------------------------------
+.button {
+  -webkit-font-smoothing: $font-smoothing;
+  @include single-transition();
+  @include text-truncate();
+  border-radius: 3px;
+  border: $border-med solid;
+  color: lighten($gray, 30%);
+  cursor: $cursor-pointer-value;
+  display: inline-block;
+  font-family: $primary-font;
+  font-weight: 600;
+  line-height: 2.2;
+  margin: 0;
+  min-height: $touch-click-area;
+  min-width: $touch-click-area;
+  outline: none;
+  padding: $pad-half $pad-double;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  > .fa {
+    margin-left: $space-half;
+  }
+
+  > input[type="radio"] {
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  // ---------------------------------------------------------------------------
+  // primary
+  // ---------------------------------------------------------------------------
+  &.primary {
+    background-color: transparent;
+
+    &:hover {
+      color: $aqua;
+    }
+
+    &:focus {
+      border: $border-med solid;
+      color: lighten($gray, 30%);
+      text-decoration: none;
+    }
+
+    &:active {
+      background: darken($aqua, 5%);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // secondary
+  // ---------------------------------------------------------------------------
+  &.secondary {
+    background-color: transparent;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      background: darken($orange, 5%);
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // tertiary
+  // ---------------------------------------------------------------------------
+  &.tertiary {
+    background: $aqua;
+    border-color: $aqua;
+    color: $white;
+
+    &:hover {
+      background: darken($aqua, 5%);
+    }
+
+    &:active {
+      background: darken($aqua, 7.5%);
+    }
+
+    > .fa-facebook {
+      margin-right: 13px;
+    }
+
+    &.facebook {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &:disabled {
+      background-color: $silver;
+      border-color: $silver;
+      color: $gray;
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------
+  // quaternary
+  // ---------------------------------------------------------------------------
+  &.quaternary {
+    background: transparent;
+    border-color: transparent;
+    color: $white;
+
+    &:hover {
+      @include opacity(.7);
+    }
+
+    &:active {
+      @include opacity(.5);
+    }
+
+    &.variant {
+      color: $gray;
+      @include opacity(.9);
+    }
+
+    &.variant {
+      color: $gray;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // quinary
+  // ---------------------------------------------------------------------------
+  &.quinary {
+    background: $orange;
+    border-color: $orange;
+    color: $white;
+
+    &:hover {
+      background: darken($orange, 5%);
+      border-color: darken($orange, 5%);
+    }
+
+    &:active {
+      background: darken($orange, 7.5%);
+      border-color: darken($orange, 7.5%);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // senary
+  // ---------------------------------------------------------------------------
+  &.senary {
+    border-color: $aqua;
+    background-color: transparent;
+    color: $aqua;
+
+    &:hover {
+      color: $white;
+      background: darken($aqua, 5%);
+    }
+
+    &:active {
+      color: $white;
+      background: darken($aqua, 7.5%);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // success
+  // ---------------------------------------------------------------------------
+  &.success {
+    background: $green;
+    border-color: $green;
+    color: $white;
+
+    &:hover {
+      background: darken($green, 5%);
+    }
+
+    &:active {
+      background: darken($green, 7.5%);
+    }
+
+    > .fa-facebook {
+      margin-right: 13px;
+    }
+
+    &.facebook {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &:disabled {
+      background-color: $silver;
+      border-color: $silver;
+      color: $gray;
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------
+  // tagged
+  // ---------------------------------------------------------------------------
+  &.tagged {
+    background: lighten($gray, 55%);
+    border-color: lighten($gray, 55%);
+    color: $gray;
+    text-transform: capitalize;
+    padding-left: $pad-half;
+
+    > .fa {
+      margin-right: $space-half;
+    }
+
+    .fa-heart {
+      display: none;
+      color: $fuchsia;
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+      background: lighten($gray, 57.5%);
+      border-color: lighten($gray, 57.5%);
+
+      .fa-heart-o {
+        display: none;
+      }
+
+      .fa-heart {
+        display: inline;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // notification
+  // ---------------------------------------------------------------------------
+  &.notification {
+
+    @include single-transition(opacity);
+    background: url("styleguide/sprite-app-icons.png") no-repeat;
+    background-size: auto 34px;
+    background-position: -245px 0;
+    position: relative;
+
+    > .notification-item {
+      display: none;
+    }
+
+    @media only screen and (min-width: $trenta) {
+      @include single-transition(opacity);
+      background: url("styleguide/sprite-app-icons.png") no-repeat;
+      background-size: auto 34px;
+      background-position: -245px 0;
+      display: block;
+      position: relative;
+
+      > .notification-item {
+        color: $blue;
+        display: block;
+        font-size: 80%;
+        height: 25px;
+        position: relative;
+        right: 1px;
+        top: -6px;
+        width: 25px;
+      }
+
+      &:hover,
+      &:focus {
+        @include opacity(.8);
+      }
+
+      &:active,
+      &.active {
+        @include opacity(.7);
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // close button for modals
+  // ---------------------------------------------------------------------------
+  &.close {
+    color: $gray;
+    font-size: $font-size-slightly-larger;
+
+    &:hover,
+    &:focus {
+      @include opacity(.8);
+    }
+
+    &:active,
+    &.active {
+      @include opacity(.7);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // extra size button for footer pages and others
+  // ---------------------------------------------------------------------------
+  &.extra-wide {
+    padding-left: $pad*6;
+    padding-right: $pad*6;
+  }
+
+  // ---------------------------------------------------------------------------
+  // extra top/bot margin button for footer pages and others
+  // ---------------------------------------------------------------------------
+  &.extra-margin {
+    margin-bottom: $space-double;
+    margin-top: $space-double;
+  }
+
+  // ---------------------------------------------------------------------------
+  // special entities
+  // ---------------------------------------------------------------------------
+  &.first-color,
+  &.second-color,
+  &.third-color {
+    color: $white;
+    margin: $space auto 0;
+    min-width: 150px;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // first color
+  // ---------------------------------------------------------------------------
+  &.first-color {
+    background: $navy;
+
+    &:hover,
+    &:focus {
+      background: lighten($navy, 5%);
+    }
+
+    &:active {
+      background: lighten($navy, 7.5%);
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // second color
+  // ---------------------------------------------------------------------------
+  &.second-color {
+    background: $orange;
+
+    &:hover,
+    &:focus {
+      background: lighten($orange, 5%);
+    }
+
+    &:active {
+      background: lighten($orange, 7.5%);
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // second color
+  // ---------------------------------------------------------------------------
+  &.third-color {
+    background: $green;
+
+    &:hover,
+    &:focus {
+      background: lighten($green, 5%);
+    }
+
+    &:active {
+      background: lighten($green, 7.5%);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// button pills
+// ---------------------------------------------------------------------------
+.button-pills-primary {
+  display: inline-block;
+
+  // ---------------------------------------------------------------------------
+  // colors
+  // ---------------------------------------------------------------------------
+  .button {
+    background: $orange;
+    border-color: $orange;
+    color: $white;
+
+    &:hover {
+      background: darken($orange, 5%);
+    }
+
+    &:active {
+      background: darken($orange, 7.5%);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // special
+  // ---------------------------------------------------------------------------
+  > .button {
+    margin-left: -4px;
+    border-radius: 0;
+    border-left: 2px solid lighten($orange, 20%);
+
+    &:first-child {
+      margin-left: 0;
+      border: 0;
+      border-radius: $global-radius 0 0 $global-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $global-radius $global-radius 0;
+    }
+
+    @media only screen and (max-width: $tall) {
+      font-size: emCalc(14px);
+    }
+  }
+}
+
+.button-pills-secondary {
+  display: inline-block;
+
+
+  &.light .button {
+    border-color: $silver;
+    color: $silver;
+  }
+
+  // ---------------------------------------------------------------------------
+  // colors
+  // ---------------------------------------------------------------------------
+  .button {
+    background: transparent;
+    border-color: lighten($gray, 30%);
+    color: lighten($gray, 30%);
+    float: none;
+
+
+    &:hover {
+      background: $aqua;
+      border-color: $aqua;
+      color: $white;
+    }
+
+    &:active,
+    &.active {
+      background: darken($aqua, 5%);
+      border-color: darken($aqua, 5%);
+      color: $white;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // special
+  // ---------------------------------------------------------------------------
+  > .button {
+    margin-left: -6px;
+    border-radius: 0;
+
+    &:first-child {
+      margin-left: 0;
+      border-radius: $global-radius 0 0 $global-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $global-radius $global-radius 0;
+    }
+
+    @media only screen and (max-width: $tall) {
+      font-size: emCalc(14px);
+    }
+  }
+}
+
+.button-pills-tertiary {
+  display: inline-block;
+
+  // ---------------------------------------------------------------------------
+  // colors
+  // ---------------------------------------------------------------------------
+  .button {
+    background: transparent;
+    border-color: $aqua;
+    color: $aqua;
+
+    &:hover {
+      background: rgba($aqua, .6);
+      border-color: $aqua;
+      color: $white;
+    }
+
+    &:active,
+    &.active {
+      background: $aqua;
+      border-color: $aqua;
+      color: $white;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // special
+  // ---------------------------------------------------------------------------
+  > .button {
+    border-radius: 0;
+    margin-left: -6px;
+    min-width: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-child {
+      margin-left: 0;
+      border-radius: 25px 0 0 25px;
+    }
+
+    &:last-child {
+      border-radius: 0 25px 25px 0;
+    }
+
+    @media only screen and (max-width: $tall) {
+      font-size: emCalc(14px);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Admin styles
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+$width: 30%; // express always in percentage [ % ]
+// -----------------------------------------------------------------------------
+// Main containers
+// -----------------------------------------------------------------------------
+html,
+body {
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+#wrap { // high level container, makes the app not have scrollbars
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.main-container {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Secondary containers
+// -----------------------------------------------------------------------------
+.content-area {
+  background: $white;
+  height: 100%;
+  overflow: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.no-gutter {
+  padding: 0;
+}

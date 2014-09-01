@@ -1,0 +1,147 @@
+// -----------------------------------------------------------------------------
+// Tables
+// -----------------------------------------------------------------------------
+// This file contains the following styles:
+//
+//   1. Normal table header.
+//   2. Table contents.
+//   3. Normal table header.
+//   4. Table contents.
+//   5. Special table (Quick Statistics).
+//   6. House info tables.
+//
+// -----------------------------------------------------------------------------
+// variables for tables
+// -----------------------------------------------------------------------------
+  $special-table-border: 1px solid $silver;
+// -----------------------------------------------------------------------------
+// normal table header
+// -----------------------------------------------------------------------------
+table.dataTable thead th,
+table.dataTable thead td {
+  background: white;
+  border-bottom: $special-table-border;
+  font-size: $font-size-slightly-smaller;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+table.dataTable.table-hover th, 
+table.dataTable thead.sortable th,
+table.dataTable.table-hover td, {
+  cursor: pointer;
+} 
+
+table.dataTable thead th.active{
+  border-bottom-color: $aqua;
+  color: $aqua;
+  background-color: white;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  border-bottom-color: $aqua;
+}
+
+// -----------------------------------------------------------------------------
+// normal table content
+// -----------------------------------------------------------------------------
+table.dataTable {
+  margin: $space 0;
+}
+
+table.dataTable tbody > tr > td {
+  vertical-align: middle;
+  p, img {
+    display: inline-block;
+  }
+  img {
+    height: 65px;
+    width: 65px;
+    vertical-align: text-bottom;
+  }
+  span {
+    display: block;
+  }
+}
+
+table.dataTable.property-table {
+  font-size: 16px;
+
+  tbody td:first-child,
+  tbody th:first-child {
+    width: 70px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// normal table footer
+// -----------------------------------------------------------------------------
+table.dataTable.no-footer,
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 0;
+}
+
+// images
+
+table.dataTable thead .sorting_asc {
+  background: url("/assets/sort_asc.png") no-repeat center right;
+}
+
+table.dataTable thead .sorting_desc {
+background: url("/assets/sort_desc.png") no-repeat center right;
+}
+
+// -----------------------------------------------------------------------------
+// normal table header
+// -----------------------------------------------------------------------------
+.table-content__header {
+  background: lighten($silver, 5%);
+  border-bottom: $special-table-border;
+  border-top: $special-table-border;
+  padding: $pad-half $pad;
+  page-break-after: avoid;
+
+  .header-title,
+  .header-extra__content {
+    font-size: $font-size-normal;
+    display: inline;
+    margin: 0;
+
+    @media only print {
+      font-size: $font-size-slightly-smaller;
+    }
+  }
+
+  .header-title {
+    text-transform: uppercase;
+  }
+
+  .header-extra__content {
+    float: right;
+    text-transform: capitalize;
+  }
+}
+// secondary table header
+// -----------------------------------------------------------------------------
+
+table.dataTable.secondary-table thead th,
+table.dataTable.secondary-table thead td {
+  color: $gray;
+  background: white;
+  border-bottom: 0;
+  font-size: $font-size-slightly-smaller;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+table.dataTable.secondary-table tbody tr, 
+table.dataTable.secondary-table tbody td, {
+  &:hover {
+    background-color: $white;
+  }
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+  border-top: none;
+}

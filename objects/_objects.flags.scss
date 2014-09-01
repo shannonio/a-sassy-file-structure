@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains the configurations of the flags that we use through the
+// styles in the application
+// -----------------------------------------------------------------------------
+.alert {
+  @include single-transition();
+  background: lighten($yellow, 37.5%);
+  margin: 0;
+  padding: $global-padding-container;
+  position: relative;
+  display: none;
+
+  > .close {
+    position: absolute;
+    top: $space-half;
+    right: $space-half;
+  }
+}
+
+.alert-info,
+.alert-warning {
+
+  > .title,
+  > .sub-title,
+  > .content {
+    color: $gray;
+    margin: 0;
+  }
+
+  .content {
+    margin: $space-half 0 0;
+
+    .link {
+      color: $gray;
+
+      .good {
+        color: $green;
+      }
+
+      .regular {
+        $color: yellow;
+      }
+
+      .bad {
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// Tabs styles
+// -----------------------------------------------------------------------------
+.tab-area {
+  background: lighten($silver, 13%);
+  padding: $pad-half $pad 0;
+  margin-bottom: $space;
+}
+
+.tabbed-content {
+  background: $white;
+  display: none;
+  padding: $pad-half $global-padding-container;
+  &.active {
+    display: block;
+  }
+}

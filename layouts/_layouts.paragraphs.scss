@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------------------
+// text alignment helpers
+// -----------------------------------------------------------------------------
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-justify{
+  text-align: justify;
+}
+// -----------------------------------------------------------------------------
+// display alignment helpers
+// -----------------------------------------------------------------------------
+
+.display {
+
+  &.inline {
+    display: inline;
+  }
+
+  &.inline-block {
+    display: inline-block;
+  }
+
+  &.block {
+    display: block;
+  }
+
+  &.none {
+    display: none;
+  }
+
+}  
+// -----------------------------------------------------------------------------
+// vertical alignment helpers
+// -----------------------------------------------------------------------------
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.bottom {
+  vertical-align: bottom;
+}
+
+
+// -----------------------------------------------------------------------------
+// text size helpers
+// -----------------------------------------------------------------------------
+.to-uppercase {
+  text-transform: uppercase;
+}
+
+.to-capital {
+  text-transform: capitalize;
+}
+
+.to-lowercase {
+  text-transform: lowercase;
+}
+
+// -----------------------------------------------------------------------------
+// Avoid headers breaking into a new page and displayed on bottom on printed
+// media
+// -----------------------------------------------------------------------------
+h2,
+h3 {
+  page-break-after: avoid;
+}

@@ -1,0 +1,36 @@
+.badge {
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 0 0 $space;
+
+  &:empty {
+    display: block;
+  }
+
+  &.pin-map {
+    background: url("/assets/badges/map-pin@2x.png") no-repeat center center, rgba($blue, .4);
+    background-size: 85px 85px;
+  }
+
+  &.pin-comment {
+    background: url("/assets/badges/comment-pin@2x.png") no-repeat center center, rgba($blue, .4);
+    background-size: 85px 85px;
+  }
+
+  &.pin-love {
+    background: url("/assets/badges/love-pin@2x.png") no-repeat center center, rgba($blue, .4);
+    background-size: 85px 85px;
+  }
+  &.centered {
+    margin: 0 auto $space;
+  }
+}
+
+.referral {
+  display: inline-block;
+  height: 100px;
+  margin-top: $space-double;
+  width: 100px;
+}

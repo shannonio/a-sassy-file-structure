@@ -1,0 +1,411 @@
+// -----------------------------------------------------------------------------
+// Jumbotron styles and items inside
+// -----------------------------------------------------------------------------
+$max-inner-width: 860px;
+$jumbotron-height: 80vh;
+
+.jumbotron {
+  color: $white;
+  height: $jumbotron-height;
+  margin: 0;
+  max-height: 700px;
+  min-height: 600px;
+  padding-top: 65px;
+  position: relative;
+  transform: translate3d(0,0,0);
+
+  @media only screen and (max-width: $tall) {
+    max-height: 540px;
+    min-height: 540px;
+  }
+
+  @media only screen and (min-width: $venti) {
+    padding-top: 130px;
+  }
+
+  .slogan {
+    font-size: emCalc(22px);
+    font-weight: 400;
+    line-height: 2;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $tall) {
+      font-size: emCalc(18px);
+    }
+  }
+
+  .special-bullet {
+    display: inline;
+    position: relative;
+    margin-right: 25px;
+
+    > div {
+      position: absolute;
+      top: -25%;
+    }
+  }
+
+  .link {
+    color: $white;
+  }
+
+  .fancy-divider {
+    margin-top: $space-and-half;
+  }
+
+  .jumbotron-form {
+
+    > fieldset {
+      @include clearfix();
+      background: rgba($black, .3);
+      border: 0;
+      border-radius: $global-radius;
+      margin: $space auto 0;
+      max-width: $max-inner-width - 60px;
+      padding: $pad-half;
+
+      @media only screen and (min-width: $tall) {
+        padding: $pad-and-half;
+      }
+    }
+
+    .input,
+    .button {
+      display: block;
+      width: 100%;
+
+      @media only screen and (min-width: $grande) {
+        float: left;
+      }
+    }
+
+    .input {
+      margin: 0 0 $space-half;
+
+      @media only screen and (min-width: $grande) {
+        width: 70%;
+        margin: 0;
+        margin-right: 1%;
+      }
+    }
+
+    .button {
+
+      @media only screen and (min-width: $grande) {
+        width: 29%;
+      }
+    }
+  }
+
+  .agent-link-image {
+    bottom: $space-double;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    img {
+      height: 120px;
+      width: 135px;
+    }
+
+    a {
+      @include single-transition();
+
+      &:hover {
+        @include opacity(.7);
+      }
+    }
+  }
+
+  .referral {
+    margin-right: 2.5%;
+
+    @media only screen and (min-width: $grande) {
+      margin-right: 7.5%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  .watch-video {
+    background: url("/assets/pages/watch-video.png") no-repeat;
+    background-size: cover;
+    bottom: 2.5em;
+    color: $white;
+    display: block;
+    height: 117px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 135px;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Parallax styles
+  // ---------------------------------------------------------------------------
+  &.parallax-enabled {
+    background: none !important;
+    overflow: hidden;
+
+    .parallax-bg {
+      display: block;
+    }
+  }
+
+  .parallax-bg {
+    bottom: 0;
+    display: none;
+    height: 120%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  // ---------------------------------------------------------------------------
+  // backgrounds
+  // ---------------------------------------------------------------------------
+  &.home {
+    background: url("/assets/backgrounds/background-home-1.jpg") no-repeat;
+    background-size: 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-home-1.jpg")  no-repeat;
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $trenta){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.agent {
+    background: url("/assets/backgrounds/background-home-2.jpg");
+    background-size: 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-home-2.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.pro {
+    background: url("/assets/backgrounds/background-home-3.jpg");
+    background-size: 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-home-3.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.referral-page {
+    background: url("/assets/backgrounds/background-home-3.jpg");
+    background-size: 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-home-3.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.builder-1 {
+    background: url("/assets/backgrounds/background-builder-1.jpg");
+    background-size: cover;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-builder-1.jpg");
+      background-size: cover;
+    }
+  }
+
+  &.builder-2 {
+    background: url("/assets/backgrounds/background-builder-2.jpg");
+    background-size: auto 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-builder-2.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.builder-3 {
+    background: url("/assets/backgrounds/background-builder-3.jpg");
+    background-size: 100%;
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-builder-3.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+
+  &.choose-an-agent {
+    background: url("/assets/backgrounds/background-choose-an-agent-1.jpg");
+    background-size: 100%;
+    height: auto;
+    max-height: 500px;
+    min-height: 0;
+    padding-top: 65px*2;
+
+    .valigned {
+      min-height: 250px;
+    }
+
+    > .parallax-bg {
+      background: url("/assets/backgrounds/background-choose-an-agent-1.jpg");
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $venti){
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: $tall) {
+      max-height: 400px;
+    }
+
+    @media only screen and (min-width: $venti) {
+      padding-top: 65px;
+    }
+
+    @media only screen and (min-width: $depth-charge){
+      background-size: cover;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Alignment inside jumbotron section
+// -----------------------------------------------------------------------------
+.valigned {
+  display: table;
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+
+  .vchild {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  @media only screen and (min-width: $tall) {
+    min-height: 350px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Fancy classes
+// -----------------------------------------------------------------------------
+.fancy-divider {
+  display: block;
+  line-height: .5;
+  text-align: center;
+  margin: 0 0 $space-double;
+
+  > .element {
+    background: rgba($white, .4);
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    width: 10px;
+
+    &::after,
+    &::before {
+      border-bottom: 1px solid rgba($white, .4);
+      content: "";
+      height: 1px;
+      position: absolute;
+      top: 4px;
+      width: 100px;
+    }
+
+    &::before {
+      right: 100%;
+      margin-right: 5px;
+    }
+
+    &::after {
+      left: 100%;
+      margin-left: 5px;
+    }
+
+    &.dark,
+    &.dark::before,
+    &.dark::after {
+      background: rgba($gray, .4); 
+    }
+
+    &.icon {
+      background: url("/assets/pages/icon-person.png") no-repeat;
+      background-size: contain;
+      border-radius: 0;
+      height: 25px;
+      margin-bottom: 1em;
+      width: 25px;
+
+      &::after,
+      &::before {
+        top: 12px;
+      }
+    }
+  }
+}

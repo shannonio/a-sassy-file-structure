@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// Main header of the report pages
+// this file has:
+// 1. main-header styles
+// 2. omnisearch styles
+// 3. user options menu [my profile, settings, logout]
+// 4. notification menu
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+$main-nav-height:           82px;
+// -----------------------------------------------------------------------------
+// [1] Application main header
+// -----------------------------------------------------------------------------
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+}
+.sticky-header {
+  position: fixed;
+  transform: translate3d(0,0,0);
+  width: 100%;
+  z-index: z($index-list, main-nav);
+}
+
+.main-header {
+  background: $white;
+  border-bottom: 1px solid $silver;
+  color: $navy;
+  height: $main-nav-height;
+  top:0;
+  @extend .sticky-header;
+
+  a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This is a map with all the z-index values
+// If you have a value, please put in here in order.
+//
+// Recomendations:
+//   1. Try to use values apart and do not exceed this value
+//   2. Use the list and position elements accordingly
+//   3. Create as many lists as you need, each of which would be considered one
+//      context.
+// -----------------------------------------------------------------------------
+
+$index-list: user-options,
+             user-options-mobile,
+             main-nav,
+             side-nav,
+             main-agent; // [1]
+
+$pages-index: page-element,
+              growl-notify,
+              main-content,
+              main-mobile-nav,
+              main-navigation; // [1]
+
+$rowrotator-index: rotator,
+                   rotator-text; // [1]
+
+$cma-headers: recently-sold,
+              active; //[1]

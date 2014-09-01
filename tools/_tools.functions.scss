@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// FUNCTIONS
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// sets the number to ems, based on font-base
+// -----------------------------------------------------------------------------
+  @function emCalc($target){
+    @return ($target / $font-base) * 1em;
+  }
+
+// -----------------------------------------------------------------------------
+// some mathematical helpers to create better numbers
+// -----------------------------------------------------------------------------
+  @function quarter($element-number) {
+    @return round($element-number / 4);
+  }
+
+  @function halve($element-number) {
+    @return round($element-number / 2);
+  }
+
+  @function double($element-number) {
+    @return round($element-number * 2);
+  }
+
+  @function quadruple($element-number) {
+    @return round($element-number * 4);
+  }
+
+// -----------------------------------------------------------------------------
+// strip unit function
+// -----------------------------------------------------------------------------
+  @function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+// -----------------------------------------------------------------------------
+// z-index and error reporting
+// -----------------------------------------------------------------------------
+@function z($list, $element) {
+
+  $z-index: index($list, $element);
+
+  @if $z-index {
+    @return $z-index;
+  }
+
+  @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+  @return null;
+}

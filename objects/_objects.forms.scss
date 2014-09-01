@@ -1,0 +1,16 @@
+.referral-form {
+  padding-bottom: $pad*4;
+  padding-top: $pad-double;
+
+  .input {
+    width: 100%;
+  }
+
+  .input + .input {
+    margin-top: $space;
+  }
+
+  .button {
+    margin-top: $space-double;
+  }
+}

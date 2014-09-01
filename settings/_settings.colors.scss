@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// colors
+// -----------------------------------------------------------------------------
+
+//cool
+  $catalina:                      #21496b;
+  $navy:                          #003c89;
+  $midnight:                      #21496b;
+  $blue:                          #0074d9;
+  $aqua:                          #39afe8;
+  $teal:                          #39cccc;
+  $olive:                         #3d9970;
+  $green:                         #2ecc40;
+  $lime:                          #01ff70;
+//warm
+  $yellow:                        #ffdc00;
+  $orange:                        #ef6316;
+  $red:                           #ff4136;
+  $maroon:                        #85144b;
+  $fuchsia:                       #d60e7e;
+  $purple:                        #b10dc9;
+//gray scale
+  $white:                         #ffffff;
+  $offwhite:                      #f7f7f7;
+  $silver:                        #d0d4de;
+  $gray:                          #606165;
+  $black:                         #111111;
+  $grey-light:                    #d7d7d7;
+  $grey-light-2:                  #adafb0;
+  $grey-dark:                     #707070;
+
+  $base:                          $aqua; // choose your base color
+  $base-background:               $blue;
+  $base-danger-color:             $yellow;
+  $base-error-color:              $red;
+  $base-hover-color:              $white;
+  $base-link-color:               $blue;
+  $base-valid-color:              $green;
+
+  $dim:                           rgba($black, .5);
+  $dimmer:                        rgba($black, .8);
+  $global-border-color:           $grey-light;
+
+// -----------------------------------------------------------------------------
+// colors for brands
+// -----------------------------------------------------------------------------
+  $brand-facebook:                #03539e;
+  $brand-twitter:                 #35ccff;
+  $brand-linkedin:                #217bc1;
+//globals
+$global-representative-brand-color:      $white;
+$global-active-tab-color:       darken($gray, 10%);
+$global-border-color:           $grey-light;
+$global-footer-color:           lighten($black, 5%);
+$global-subduead-header-color:  $grey-light;
+$global-link-color:             $silver !default;
+$global-text-color:             $grey-light !default;
+$global-text-light-color:       $grey-light-2;
+$global-text-light-color-2:     $grey-dark;
+$global-active-text-color:      $navy;
+$global-inactive-text-color:    $navy;

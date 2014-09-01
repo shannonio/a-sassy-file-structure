@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// fonts-families
+// -----------------------------------------------------------------------------
+  $primary-font:   "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+                   Helvetica, Arial, "Lucida Grande", sans-serif;
+  $secondary-font: serif;
+  $tertiary-font:  serif;
+
+// -----------------------------------------------------------------------------
+// font styles
+// -----------------------------------------------------------------------------
+// you want to express in Pixels, because you can use emCalc or remCalc in
+// your atom's stylesheet, this are just some default sizes.
+// -----------------------------------------------------------------------------
+  $font-base:                     16px !default;
+  $font-size-normal:              1em !default;
+  $font-size-slightly-larger:     1.0625em !default;
+  $font-size-slightly-smaller:    .875em !default;
+  $font-size-small:               .75em !default;
+  $font-size-large:               1.4375em !default;
+
+  $font-smoothing:                antialiased !default;
+
+  $element-base-font-size:        $font-base;
+  $element-base-line-height:      ($font-base/2)*3 !default;
+  $element-base-text-color:       $black !default;
+  $element-base-spacing-unit:     24px;
+
+// -----------------------------------------------------------------------------
+// font-weight
+// -----------------------------------------------------------------------------
+  $font-weight-light:             200;
+  $font-weight-regular:           400;
+  $font-weight-semi-bold:         600;
+  $font-weight-bold:              700;

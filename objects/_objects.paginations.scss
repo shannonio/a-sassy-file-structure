@@ -1,0 +1,63 @@
+//------------------------------------------------------------------------------
+// Default paginator (don't use it on a UL element)
+//------------------------------------------------------------------------------
+.pagination {
+  font-size: $font-size-slightly-larger;
+  font-weight: 500;
+  margin: $space 0 0;
+
+  .link {
+    color: $gray;
+    padding: $pad;
+
+    &.active {
+      color: $aqua;
+    }
+  }
+
+  .fa {
+    color: $gray;
+  }
+}
+
+//------------------------------------------------------------------------------
+// Bx-Slider paginator (Only for Website Builder Page)
+//------------------------------------------------------------------------------
+.bx-pager.bx-default-pager {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bx-pager-item {
+  display: inline-block;
+
+  .bx-pager-link:hover,
+  .bx-pager-link.active {
+    background: rgba($white, .7);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Changes to default colors of bootstrap
+//------------------------------------------------------------------------------
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+  background-color: $aqua;
+  border-color: $aqua;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+  color: $aqua;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+  color: darken($aqua, 10%);
+}
